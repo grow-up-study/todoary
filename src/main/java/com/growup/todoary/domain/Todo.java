@@ -17,8 +17,8 @@ public class Todo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "content")
+    private String content;
 
     @Column(name = "date")
     private LocalDate date;
