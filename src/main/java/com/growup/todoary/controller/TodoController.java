@@ -5,6 +5,7 @@ import com.growup.todoary.service.TodoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class TodoController {
     }
 
     @GetMapping("/todo/{id}")
-    public ResponseEntity<Todo> getTodo(Long id) {
+    public ResponseEntity<Todo> getTodo(@PathVariable Long id) {
         return ResponseEntity.ok(todoService.getTodo(id));
     }
 }

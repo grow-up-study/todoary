@@ -1,6 +1,8 @@
 package com.growup.todoary.service;
 
 import com.growup.todoary.domain.Todo;
+import com.growup.todoary.exception.NotExistentTodoException;
+import com.growup.todoary.exception.ExceptionMessage;
 import com.growup.todoary.repository.TodoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,6 +22,7 @@ public class TodoService {
     }
 
     public Todo getTodo(Long id) {
-        return todoRepository.findById(id).orElseThrow();
+        return todoRepository.findById(id).
+                orElseThrow(() -> new NotExistentTodoException(ExceptionMessage.NOT_EXISTENT_TODO));
     }
 }
