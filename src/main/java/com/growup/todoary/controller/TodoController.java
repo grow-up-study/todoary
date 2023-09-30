@@ -18,6 +18,6 @@ public class TodoController {
 
     @GetMapping("/todos")
     public ResponseEntity<List<Todo>> getTodos() {
-        return new ResponseEntity<>(todoService.getTodos(), HttpStatus.OK);
+        return ResponseEntity.ok((todoService.getTodos()));
     }
 }
