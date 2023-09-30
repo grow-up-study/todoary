@@ -17,6 +17,11 @@ public class TodoController {
 
     @GetMapping("/todos")
     public ResponseEntity<List<Todo>> getTodos() {
-        return ResponseEntity.ok((todoService.getTodos()));
+        return ResponseEntity.ok(todoService.getTodos());
+    }
+
+    @GetMapping("/todo/{id}")
+    public ResponseEntity<Todo> getTodo(Long id) {
+        return ResponseEntity.ok(todoService.getTodo(id));
     }
 }
