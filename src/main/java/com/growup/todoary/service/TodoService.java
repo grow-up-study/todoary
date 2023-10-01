@@ -23,6 +23,6 @@ public class TodoService {
 
     public Todo getTodo(Long id) {
         return todoRepository.findById(id).
-                orElseThrow(() -> new TodoNotFoundException(ExceptionMessage.NOT_EXISTENT_TODO));
+                orElseThrow(() -> new TodoNotFoundException(ExceptionMessage.TODO_NOT_FOUND));
     }
 }
