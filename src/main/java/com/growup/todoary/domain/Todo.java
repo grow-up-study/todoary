@@ -22,4 +22,9 @@ public class Todo {
 
     @Column(name = "date")
     private LocalDate date;
+
+    public void update(String content, LocalDate date) {
+        this.content = content;
+        this.date = date;
+    }
 }
