@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(NotExistentTodoException.class)
-    public ResponseEntity<String> notExistentTodo(NotExistentTodoException e) {
+    @ExceptionHandler(TodoNotFoundException.class)
+    public ResponseEntity<String> notExistentTodo(TodoNotFoundException e) {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 }
