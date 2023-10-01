@@ -1,6 +1,7 @@
 package com.growup.todoary.controller;
 
 import com.growup.todoary.domain.Todo;
+import com.growup.todoary.dto.response.TodoResponse;
 import com.growup.todoary.service.TodoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -21,8 +22,8 @@ public class TodoController {
         return ResponseEntity.ok(todoService.findAll());
     }
 
-    @GetMapping("/todo/{id}")
-    public ResponseEntity<Todo> findById(@PathVariable Long id) {
+    @GetMapping("/todos/{id}")
+    public ResponseEntity<TodoResponse> findById(@PathVariable Long id) {
         return ResponseEntity.ok(todoService.findById(id));
     }
 }

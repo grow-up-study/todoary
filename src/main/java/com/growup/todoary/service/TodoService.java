@@ -1,6 +1,7 @@
 package com.growup.todoary.service;
 
 import com.growup.todoary.domain.Todo;
+import com.growup.todoary.dto.response.TodoResponse;
 import com.growup.todoary.exception.TodoNotFoundException;
 import com.growup.todoary.exception.ExceptionMessage;
 import com.growup.todoary.repository.TodoRepository;
@@ -21,8 +22,14 @@ public class TodoService {
         return todoRepository.findAll();
     }
 
-    public Todo findById(Long id) {
-        return todoRepository.findById(id).
+    public TodoResponse findById(Long id) {
+        Todo todo =  todoRepository.findById(id).
                 orElseThrow(() -> new TodoNotFoundException(ExceptionMessage.TODO_NOT_FOUND));
+
+        return TodoResponse.builder()
+                .id(todo.getId())
+                .content(todo.getContent())
+                .date(todo.getDate())
+                .build();
     }
 }
