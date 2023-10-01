@@ -12,8 +12,8 @@ import java.time.LocalDate;
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public class TodoCreateRequest {
 
-    @NotNull(message = "content는 null이면 안됩니다.")
-    private final String content;
+    @NotNull(message = "name은 null이면 안됩니다.")
+    private final String name;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @NotNull(message = "date는 null이면 안됩니다.")

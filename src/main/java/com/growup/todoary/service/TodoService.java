@@ -24,7 +24,7 @@ public class TodoService {
     @Transactional
     public Long create(TodoCreateRequest request) {
         Todo todo = Todo.builder()
-                .content(request.getContent())
+                .content(request.getName())
                 .date(request.getDate())
                 .build();
         Todo saved = todoRepository.save(todo);
@@ -35,7 +35,7 @@ public class TodoService {
     public void update(Long id, TodoUpdateRequest request) {
         Todo todo = todoRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 Todo가 없습니다."));
-        todo.update(request.getContent(), request.getDate());
+        todo.update(request.getName(), request.getDate());
     }
 
     @Transactional
