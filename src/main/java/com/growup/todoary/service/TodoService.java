@@ -17,11 +17,11 @@ public class TodoService {
 
     private final TodoRepository todoRepository;
 
-    public List<Todo> getTodos() {
+    public List<Todo> findAll() {
         return todoRepository.findAll();
     }
 
-    public Todo getTodo(Long id) {
+    public Todo findById(Long id) {
         return todoRepository.findById(id).
                 orElseThrow(() -> new TodoNotFoundException(ExceptionMessage.TODO_NOT_FOUND));
     }
