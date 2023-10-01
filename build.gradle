@@ -5,7 +5,6 @@ plugins {
 }
 
 group = 'com.growup'
-version = '0.0.1-SNAPSHOT'
 
 java {
 	sourceCompatibility = '17'
@@ -33,4 +32,8 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+bootJar {
+	archiveFileName = 'todoary.jar'
 }
