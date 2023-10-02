@@ -1,4 +1,4 @@
-package com.growup.todoary.service.dto;
+package com.growup.todoary.service.dto.request;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

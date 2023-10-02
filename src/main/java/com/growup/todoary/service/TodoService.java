@@ -1,12 +1,12 @@
 package com.growup.todoary.service;
 
 import com.growup.todoary.domain.Todo;
-import com.growup.todoary.dto.response.TodoResponse;
+import com.growup.todoary.service.dto.response.TodoResponse;
 import com.growup.todoary.exception.ExceptionMessage;
 import com.growup.todoary.exception.TodoNotFoundException;
 import com.growup.todoary.repository.TodoRepository;
-import com.growup.todoary.service.dto.TodoCreateRequest;
-import com.growup.todoary.service.dto.TodoUpdateRequest;
+import com.growup.todoary.service.dto.request.TodoCreateRequest;
+import com.growup.todoary.service.dto.request.TodoUpdateRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

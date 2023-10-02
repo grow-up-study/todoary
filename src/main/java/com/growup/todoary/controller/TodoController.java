@@ -1,9 +1,9 @@
 package com.growup.todoary.controller;
 
-import com.growup.todoary.dto.response.TodoResponse;
+import com.growup.todoary.service.dto.response.TodoResponse;
 import com.growup.todoary.service.TodoService;
-import com.growup.todoary.service.dto.TodoCreateRequest;
-import com.growup.todoary.service.dto.TodoUpdateRequest;
+import com.growup.todoary.service.dto.request.TodoCreateRequest;
+import com.growup.todoary.service.dto.request.TodoUpdateRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
