@@ -37,7 +37,7 @@ public class TodoController {
     }
 
     @PostMapping
-    public ResponseEntity<Long> create(@RequestBody @Valid TodoCreateRequest request) {
+    public ResponseEntity<Void> create(@RequestBody @Valid TodoCreateRequest request) {
         Long id = todoService.create(request);
         return ResponseEntity.created(URI.create("/todos/" + id)).build();
     }
