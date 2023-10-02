@@ -1,4 +1,4 @@
-package com.growup.todoary.dto.response;
+package com.growup.todoary.service.dto.response;
 
 import com.growup.todoary.domain.Todo;
 import lombok.AllArgsConstructor;
