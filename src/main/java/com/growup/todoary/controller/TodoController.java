@@ -1,6 +1,5 @@
 package com.growup.todoary.controller;
 
-import com.growup.todoary.domain.Todo;
 import com.growup.todoary.dto.response.TodoResponse;
 import com.growup.todoary.service.TodoService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +17,7 @@ public class TodoController {
     private final TodoService todoService;
 
     @GetMapping("/todos")
-    public ResponseEntity<List<Todo>> findAll() {
+    public ResponseEntity<List<TodoResponse>> findAll() {
         return ResponseEntity.ok(todoService.findAll());
     }
 
