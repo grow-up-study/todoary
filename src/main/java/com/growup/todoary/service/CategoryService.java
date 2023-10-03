@@ -1,6 +1,5 @@
 package com.growup.todoary.service;
 
-import com.growup.todoary.domain.Category;
 import com.growup.todoary.repository.CategoryRepository;
 import com.growup.todoary.service.dto.response.CategoryResponse;
 import lombok.RequiredArgsConstructor;
