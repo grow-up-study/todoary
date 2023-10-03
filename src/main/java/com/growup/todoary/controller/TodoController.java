@@ -26,12 +26,12 @@ public class TodoController {
 
     private final TodoService todoService;
 
-    @GetMapping("/todos")
+    @GetMapping
     public ResponseEntity<List<TodoResponse>> findAll() {
         return ResponseEntity.ok(todoService.findAll());
     }
 
-    @GetMapping("/todos/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<TodoResponse> findById(@PathVariable Long id) {
         return ResponseEntity.ok(todoService.findById(id));
     }
