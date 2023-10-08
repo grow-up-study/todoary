@@ -1,11 +1,12 @@
 package com.growup.todoary.service.dto.response;
 
 import com.growup.todoary.domain.Category;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 
 @Builder
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class CategoryResponse {
 
     private long id;
