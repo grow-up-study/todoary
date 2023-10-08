@@ -20,6 +20,6 @@ public class CategoryService {
         return categoryRepository.findAll()
                 .stream()
                 .map(CategoryResponse::new)
-                .collect(Collectors.toList());
+                .toList();
     }
 }
