@@ -9,7 +9,7 @@ import lombok.Builder;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class CategoryResponse {
 
-    private long id;
+    private Long id;
 
     private String name;
 
