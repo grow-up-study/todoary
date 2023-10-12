@@ -25,7 +25,7 @@ public class TodoService {
         return todoRepository.findAll()
                 .stream()
                 .map(TodoResponse::new)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public TodoResponse findById(Long id) {
