@@ -1,6 +1,7 @@
 package com.growup.todoary.service.dto.response;
 
 import com.growup.todoary.domain.Todo;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -9,7 +10,7 @@ import java.time.LocalDate;
 
 @Getter
 @Builder
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class TodoResponse {
 
     private Long id;
